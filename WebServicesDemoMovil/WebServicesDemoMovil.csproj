@@ -43,10 +43,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccesoDatos">
+    <Reference Include="AccesoDatos, Version=1.0.2430.24596, Culture=neutral">
       <HintPath>..\..\..\..\..\Inmel\Fuentes\CuadranteObjectivosEPM\ADN.HUMANO.CUADRANTE.DATOS\bin\Debug\AccesoDatos.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="ADN.UTILIDADES">
+    <Reference Include="ADN.UTILIDADES, Version=1.0.0.0, Culture=neutral">
       <HintPath>..\..\..\..\..\Inmel\Fuentes\WebSites\CuadranteObjectivosEPM\Bin\ADN.UTILIDADES.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -99,6 +100,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Configuracion\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\Perfil1.pubxml" />

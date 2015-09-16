@@ -5,6 +5,12 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServicesDemoMovil", "WebServicesDemoMovil\WebServicesDemoMovil.csproj", "{1F115DB3-0C0A-4518-A804-3FF0102D274F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TercerasPartes", "TercerasPartes", "{ED8576BD-94A9-4836-8331-B4A5EBAFDBB6}"
+	ProjectSection(SolutionItems) = preProject
+		TercerasPartes\AccesoDatos.dll = TercerasPartes\AccesoDatos.dll
+		TercerasPartes\ADN.UTILIDADES.dll = TercerasPartes\ADN.UTILIDADES.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
