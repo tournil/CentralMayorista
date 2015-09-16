@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using Microsoft.WindowsAzure.Storage.Blob;
+using WebServicesDemoMovil.Entidades;
+
 
 namespace WebServicesDemoMovil
 {
@@ -16,41 +20,39 @@ namespace WebServicesDemoMovil
     // [System.Web.Script.Services.ScriptService]
     public class Service1 : System.Web.Services.WebService
     {
-
+        private General _objGeneral;
         [WebMethod]
         public string ObtenerUbicaciones(string strIdMovil)
         {
-            General objGeneral = new General();
-            System.Data.DataSet dtsMisAmigos = objGeneral.ObtenerUbicacionAmigos(strIdMovil);
-            if (dtsMisAmigos != null)
-            {
-                return dtsMisAmigos.GetXml();
-            }
-            return "";
+            _objGeneral = new General();
+            var dtsMisAmigos = _objGeneral.ObtenerUbicacionAmigos(strIdMovil);
+            return dtsMisAmigos != null ? dtsMisAmigos.GetXml() : "";
         }
 
         [WebMethod]
         public string ListarNoticias()
         {
-            General objGeneral = new General();
-            System.Data.DataSet dtsNoticias = objGeneral.ListarNoticias();
-            if (dtsNoticias != null)
-            {
-                return dtsNoticias.GetXml();
-            }
-            return "";
+            _objGeneral = new General();
+            var dtsNoticias = _objGeneral.ListarNoticias();
+            return dtsNoticias != null ? dtsNoticias.GetXml() : "";
         }
         [WebMethod]
         public string ListarEventos()
         {
-            General objGeneral = new General();
-            System.Data.DataSet dtsEventos = objGeneral.ListarEventos();
-            if (dtsEventos != null)
-            {
-                return dtsEventos.GetXml();
-            }
-            return "";
+            _objGeneral = new General();
+            var dtsEventos = _objGeneral.ListarEventos();
+            return dtsEventos != null ? dtsEventos.GetXml() : "";
+        }
 
+        [WebMethod]
+        public string GuardarAtencion(Solicitudes solicitud)
+        {
+            var adjuntos = new Adjuntos();
+            var archivo = adjuntos.GuardarArchivo(solicitud.ImagenBytes, "tucma", solicitud.NombreImagen);
+            solicitud.ImagenUrl = archivo.Uri.ToString();
+            _objGeneral = new General();
+            var dtsGuardado = _objGeneral.GuardarAtencion(solicitud);
+            return dtsGuardado != null ? dtsGuardado.GetXml() : "";
         }
     }
 }

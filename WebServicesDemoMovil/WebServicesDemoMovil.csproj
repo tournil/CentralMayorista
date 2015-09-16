@@ -49,6 +49,15 @@
     <Reference Include="ADN.UTILIDADES">
       <HintPath>D:\ADN\Proyectos\CentralMayorista\TercerasPartes\ADN.UTILIDADES.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics">
+      <HintPath>D:\ADN\Proyectos\CentralMayorista\TercerasPartes\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>D:\ADN\Proyectos\CentralMayorista\TercerasPartes\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -75,6 +84,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Adjuntos.cs" />
+    <Compile Include="Entidades\Solicitudes.cs" />
     <Compile Include="frmAdmonEventos.aspx.cs">
       <DependentUpon>frmAdmonEventos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,13 +112,8 @@
     <Folder Include="Configuracion\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\Perfil1.pubxml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="D:\ADN\Proyectos\CentralMayorista\ADN.Entidades\ADN.Entidades.csproj">
-      <Project>{02d51efd-fe06-4193-a5f9-3951b27c96d0}</Project>
-      <Name>ADN.Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
