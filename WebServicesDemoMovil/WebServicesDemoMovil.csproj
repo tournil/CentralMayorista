@@ -43,12 +43,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccesoDatos, Version=1.0.2430.24596, Culture=neutral">
-      <HintPath>..\..\..\..\..\Inmel\Fuentes\CuadranteObjectivosEPM\ADN.HUMANO.CUADRANTE.DATOS\bin\Debug\AccesoDatos.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="AccesoDatos">
+      <HintPath>D:\ADN\Proyectos\CentralMayorista\TercerasPartes\AccesoDatos.dll</HintPath>
     </Reference>
-    <Reference Include="ADN.UTILIDADES, Version=1.0.0.0, Culture=neutral">
-      <HintPath>..\..\..\..\..\Inmel\Fuentes\WebSites\CuadranteObjectivosEPM\Bin\ADN.UTILIDADES.dll</HintPath>
+    <Reference Include="ADN.UTILIDADES">
+      <HintPath>D:\ADN\Proyectos\CentralMayorista\TercerasPartes\ADN.UTILIDADES.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -104,6 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\Perfil1.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\ADN\Proyectos\CentralMayorista\ADN.Entidades\ADN.Entidades.csproj">
+      <Project>{02d51efd-fe06-4193-a5f9-3951b27c96d0}</Project>
+      <Name>ADN.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TercerasPartes", "TercerasP
 		TercerasPartes\ADN.UTILIDADES.dll = TercerasPartes\ADN.UTILIDADES.dll
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADN.Entidades", "D:\ADN\Proyectos\CentralMayorista\ADN.Entidades\ADN.Entidades.csproj", "{02D51EFD-FE06-4193-A5F9-3951B27C96D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1F115DB3-0C0A-4518-A804-3FF0102D274F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F115DB3-0C0A-4518-A804-3FF0102D274F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F115DB3-0C0A-4518-A804-3FF0102D274F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02D51EFD-FE06-4193-A5F9-3951B27C96D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D51EFD-FE06-4193-A5F9-3951B27C96D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D51EFD-FE06-4193-A5F9-3951B27C96D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D51EFD-FE06-4193-A5F9-3951B27C96D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
